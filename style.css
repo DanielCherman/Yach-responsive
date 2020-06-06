@@ -1,0 +1,937 @@
+@font-face{
+    src:url("fonts/PlayfairDisplay-Bold.otf");
+    font-family:"PDbold";
+}
+
+@font-face{
+    src:url("fonts/PlayfairDisplay-Black.otf");
+    font-family:"PDBlack";
+}
+
+@font-face{
+    src:url("fonts/8917.ttf");
+    font-family:"Italic";
+}
+
+@font-face{
+    src:url("fonts/PlayfairDisplay-Regular.otf");
+    font-family:"Regular";
+}
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background-image: url("img/bg.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x:hidden;
+}
+
+.main{
+    width:100%;
+    height:100vh;
+    position:relative;
+    background-color: rgba(45, 59, 80, 0.6);
+    overflow: hidden;
+}
+
+.open-menu{
+    width:100%;
+    height:20px;
+    text-align:center;
+    background: #2f3e54;
+    display:none;
+}
+
+.go-menu{
+    border:none;
+    background:rgba(1, 2, 3, 0);
+}
+
+.go-menu i{
+    padding:0;
+    text-align:center;
+    color:white;
+    font-size:15px;
+}
+
+
+
+.header{
+    width:100%;
+    position:absolute;
+    animation-name:menu;
+    animation-duration:1.5s;
+	animation-direction:normal;
+	animation-timing-function:linear;
+}
+
+.first-line{
+    position:relative;
+    display:flex;
+    width:80%;
+    margin:0 auto;
+}
+
+.logo{
+    position:absolute;
+    left:50%;
+    margin-left:-220px;
+    z-index:5;
+    border: 220px solid transparent;	
+    border-top: 120px solid #2f3e54;
+    animation-name:logo;
+    animation-duration:1.5s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.logo-img{
+    position:absolute;
+    width:240px;
+    height:120px;
+    left:50%;
+    z-index:5;
+    margin-left:-120px;
+    text-align:center;
+    padding-top:20px;
+    animation-name:logo;
+    animation-duration:1.5s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.scrol{
+    position:fixed;
+    height:30px;
+    width:100%;
+    text-align:center;
+    bottom:0;
+    padding-bottom:15px;
+    color:white;
+    font-family:Italic;
+    font-size:13px;
+}
+
+.scrol p{
+    animation-name:scroll;
+    animation-duration:1.2s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.menu{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    background: rgba(45, 59, 80, 0.7);
+}
+
+
+.trng-left{
+    margin: 0; 
+    width: 0; 
+    height: 0; 
+    border: 40px solid rgba(45, 59, 80, 0.7); 
+    border-left-color: transparent; 
+    border-top-width: 0; 
+    border-right-width: 0;
+    transform:rotate(270deg);
+}
+
+.trng-right{
+    margin: 0; 
+    width: 0; 
+    height: 0; 
+    border: 40px solid rgba(45, 59, 80, 0.7); 
+    border-left-color: transparent; 
+    border-top-width: 0; 
+    border-right-width: 0;
+    transform:rotate(180deg);
+}
+
+
+
+.left-sidebar ul{
+    padding-left:0;
+    display:flex;
+    justify-content:space-around;
+    list-style: none;
+}
+
+
+.social ul{
+    display:flex;
+    justify-content:space-around;
+    list-style: none;
+}
+
+.social li{
+    justify-content:space-around;
+}
+
+.other ul{
+    display:flex;
+    justify-content:space-around;
+    list-style: none;
+}
+
+.right-sidebar{
+    display:flex;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:11px;
+    font-family:PDbold;
+}
+
+.menu a:hover{
+    color:#d0a766;
+    transition:0.5s;
+}
+
+.menu li{
+    margin-top:-5px;
+    margin-bottom:-5px;
+    line-height:1px;
+    margin-left:10px;
+}
+
+.second-line{
+    width:100%;
+    background: rgba(51, 62, 71, 0.6);
+}
+
+.second-menu{
+    display:flex;
+    justify-content: space-between;
+    width:75%;
+    margin:0 auto;
+}
+
+
+.left-part-section ul{
+    display:flex;
+}
+
+.left-part-section ul{
+    padding-left:1px;
+    margin-left:-30px;
+}
+
+.right-part-section ul{
+    display:flex;
+}
+
+.second-menu ul{
+    list-style: none;
+}
+
+.second-menu li{
+    margin-left:30px;
+}
+
+.second-menu a{
+    font-size:12px;
+    font-family:PDBlack;
+    text-decoration:none;
+    color:white;
+    text-transform:uppercase;
+}
+
+.second-menu a:hover{
+    color:#d0a766;
+    transition:0.5s;
+}
+
+.main-text{
+    padding-top:120px;
+    overflow: hidden;
+}
+
+.text{
+    text-align:center;
+}
+
+.line{
+    width:70%;
+    text-align:center;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-around;
+    color:#bc9352;
+    animation-name:line;
+    animation-duration:2s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.short-line{
+    display:none;
+}
+
+.catamaran-info{
+    display:block;
+    font-family:PDbold;
+    font-size:45px;
+    color:white;
+    text-transform:uppercase;
+    animation-name:main;
+    animation-duration:1.5s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.about{
+    font-family:Italic;
+    font-size:18px;
+    color:#bdc1c7;
+    width:40%;
+    margin:0 auto;
+    animation-name:about;
+    animation-duration:2.5s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.main-button{
+    padding-top:30px;
+    margin:0 auto;
+    animation-name:button;
+    animation-duration:3s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.main-button button{
+    border:none;
+    text-transform:uppercase;
+    padding:10px;
+    width:180px;
+    color:white;
+    font-family:PDBlack;
+    font-size:14px;
+    letter-spacing: 2px;
+    background: #d0a765;
+}
+
+.instruments{
+    display:flex;
+    justify-content:space-around;
+    padding:20px;
+    width:50%;
+    margin:0 auto;
+    background: rgba(47, 62, 84, 0.9);
+    margin-top:40px;
+    animation-name:instruments;
+    animation-duration:3.2s;
+	animation-direction:normal;
+    animation-timing-function:linear;
+}
+
+.yacht{
+    padding:10px;
+    border:1px solid gray;
+    padding-left:2px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:gray;
+    font-family:Regular;
+    background: rgba(0,0,0,0);
+}
+
+.yacht-serch{
+    display:none;
+    padding:10px;
+    border:1px solid gray;
+    padding-left:2px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:gray;
+    font-family:Regular;
+    background: rgba(0,0,0,0);    
+
+}
+
+.vertical-line{
+    border:1px solid gray;
+    display:none;
+}
+
+.search{
+    padding:10px;
+    border:1px solid gray;
+    padding-left:2px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:gray;
+    font-family:Regular;
+    background: rgba(0,0,0,0);
+}
+
+.price{
+    color:gray;
+    text-transform: uppercase;
+}
+
+.price a{
+    text-decoration:none;
+    color:gray;
+}
+
+.price a:hover{
+    color:#bc9352;
+    transition:1s;
+}
+
+.detail{
+    padding:10px;
+    border:none;
+    padding-left:2px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:gray;
+    font-family:Regular;
+    background: rgba(0,0,0,0);
+}
+
+.search i{
+    padding-left:20px;
+}
+
+button i{
+    color:#bc9352;
+    padding-left:40px;
+}
+
+.yacht-menu{
+    position:absolute;
+    width:100%;
+    top:-500px;
+    background: #2f3e54;
+    z-index:100;
+    transition:1s;
+}
+
+.yacht-search-block{
+    position:absolute;
+    width:100%;
+    top:0;
+    background: #2f3e54;
+    z-index:100;
+    transition:1s;
+    top:-500px;
+}
+
+.yacht-search-menu{
+    width:100%;
+    padding:10px;
+    text-align:left;
+    border:1px solid gray;
+    padding-left:5px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:gray;
+    font-family:Regular;
+    background: rgba(0,0,0,0);
+}
+
+.main-search-button{
+    width:100%;
+    text-align:center;
+    border:none;
+    background:#3f4752;
+    color:#b5b9bf;
+    font-family:Regular;
+    font-size:12px;
+    text-transform:uppercase;
+    padding:10px;
+}
+
+.yacht-search-menu i{
+    float:right;
+}
+
+.search-content{
+    width:80%;
+    margin:0 auto;
+}
+
+.search-name{
+    font-size:13px;
+    text-transform: uppercase;
+    color:#bc9352;
+    font-family: PDBlack;
+}
+
+.search-close{
+    text-align:center;
+}
+
+.search-close-button{
+    padding-top:10px;
+    text-align:center;
+    padding-left:0;
+    color:white;
+    border:none;
+    background: rgba(1, 0, 0 , 0);
+}
+
+.search-close-button i{
+    padding:0;
+    color:white;
+}
+
+.yacht-name{
+    position:absolute;
+    width:100%;
+    top:0;
+    background: #2f3e54;
+    z-index:100;
+    transition:1s;
+    top:-500px;
+}
+
+.name-content{
+    width:80%;
+    margin:0 auto;
+}
+
+.item{
+    text-transform:uppercase;
+    font-family:Regular;
+    color:#b5b9bf;
+    font-size:13px;
+}
+
+.name-close{
+    text-align:center;
+}
+
+.name-close-button{
+    padding-top:10px;
+    text-align:center;
+    padding-left:0;
+    color:white;
+    border:none;
+    background: rgba(1, 0, 0 , 0);
+}
+
+.name-close-button i{
+    padding:0;
+    color:white;
+}
+
+
+
+
+
+
+.menu-content{
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+}
+
+.menu-content ul{
+    list-style: none;
+    margin-left:-40px;
+}
+
+.menu-content li{
+    width:100%;
+    padding:5px;
+}
+
+.menu-content a{
+    text-decoration:none;
+    color:white;  
+    font-size:13px;
+    font-family:PDBlack;
+    text-transform: uppercase;
+    color:#bdc1c7;
+}
+
+.menu-content a:hover{
+    color:white;
+    transition:0.5s;
+}
+
+.first-part{
+    border-bottom:1px solid gray;
+}
+
+.first-part a{
+    font-size:12px;
+    font-family:PDBlack;
+    text-transform:unset;
+}
+
+button{
+    outline:none;
+}
+
+.menu-close i{
+    padding:0;
+    color:white;
+}
+
+.menu-close{
+    padding-top:10px;
+    text-align:center;
+    padding-left:0;
+    color:white;
+    border:none;
+    background: rgba(1, 0, 0 , 0);
+}
+
+
+
+
+@keyframes menu{
+    0%{
+        margin-top:-85px;
+        display:none;
+    }
+
+    100%{
+        margin-top:0px;
+        display:block;
+    }
+}
+
+@keyframes logo{
+    0%{
+        top:-85px;
+        display:none;
+    }
+
+    100%{
+        top:0px;
+        display:block;
+    }
+}
+
+@keyframes scroll{
+    0%{
+        padding-top:40px;
+        display:none;
+    }
+
+    100%{
+        padding-top:1px;
+        display:block;
+    }
+}
+
+@keyframes main {
+    0%{
+        padding-top:500px;
+        display:none;
+    }
+
+    100%{
+        padding-top:0;
+        display:block;
+    }
+}
+
+@keyframes line{
+    0%{
+        padding-top:500px;
+        display:none;
+    }
+
+    100%{
+        padding-top:0;
+        display:block;
+    }
+}
+
+@keyframes about{
+    0%{
+        padding-top:500px;
+        display:none;
+    }
+
+    100%{
+        padding-top:0;
+        display:block;
+    }
+}
+
+@keyframes button{
+    0%{
+        padding-top:500px;
+        display:none;
+    }
+
+    100%{
+        padding-top:30px;
+        display:block;
+    }
+}
+
+@keyframes instruments{
+    0%{
+        margin-top:500px;
+        display:none;
+    }
+
+    100%{
+        padding-top:40px;
+        display:block;
+    }
+}
+
+@media(max-width:1220px){
+    .first-line{
+        width:90%;;
+    }
+
+    .second-menu{
+        width:85%;
+    }
+}
+
+@media(max-width:1100px){
+    .logo{
+        position:absolute;
+        left:50%;
+        margin-left:-150px;
+        border: 150px solid transparent;	
+        border-top: 120px solid #2f3e54;
+    }
+    
+    .logo-img{
+        position:absolute;
+        width:240px;
+        height:120px;
+        left:50%;
+        margin-left:-120px;
+        text-align:center;
+        padding-top:20px;
+    }
+
+    .instruments{
+        width:65%;
+    }
+
+    .long-line{
+        display:none;
+    }
+
+    .short-line{
+        display:block;
+    }
+
+    .line{
+        width:50%;
+    }
+
+}
+
+@media(max-width:980px){
+    button i{
+        color:#bc9352;
+        padding-left:10px;
+    }
+
+    .first-line{
+        width:95%;;
+    }
+
+    .second-menu{
+        width:95%;
+    }
+}
+
+@media(max-width:900px){
+    .open-menu{
+        display:block;
+    }
+
+    .first-line{
+        display:none;
+    }
+
+    .second-line{
+        display:none;
+    }
+
+    .catamaran-info{
+    font-size:30px;
+    width:90%;
+    margin:0 auto;
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+    .about{
+    font-size:16px;
+    width:60%;
+}
+    
+    .yacht-serch{
+        display:block;
+        width:40%;
+        background: #3f4752;
+    }
+
+    .range{
+        display:none;
+    }
+    
+    .search{
+        display:none;
+    }
+
+    .detail{
+        display:none;
+    }
+
+    .yacht-serch i{
+        display:none;
+    }
+
+    .yacht i{
+       display:none;
+    }
+
+    .yacht {
+        width:40%;
+        background: #3f4752;
+     }
+
+     .vertical-line{
+         display:block;
+     }
+
+     .line{
+        width:65%;
+    }
+
+}
+
+@media(max-width:400px){
+    .catamaran-info{
+        font-size:25px;
+    }
+
+    .menu-content{
+        width:90%;
+    }
+
+    .instruments{
+        width:85%;
+        margin-top:60px;
+    }
+
+    .main-button button{
+        width:80%;
+    }
+
+    .about{
+        width:80%;
+        font-size:13px;
+    }
+
+    .line{
+        width:90%;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#p_prldr{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    background: #2f3e54;
+    z-index: 30;}
+     
+    .contpre small{font-size:25px;}
+     
+    .contpre{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    left: 50%;top: 48%;
+    margin-left:-125px;
+    margin-top:-75px;
+    color:#fff;
+    font-size:40px;
+    letter-spacing:-2px;
+    text-align:center;
+    line-height:35px;}
+     
+    #p_prldr .svg_anm {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    background: url(images/oval.svg) center center no-repeat;
+    background-size:41px;    
+    margin: -16px 0 0 -16px;}
